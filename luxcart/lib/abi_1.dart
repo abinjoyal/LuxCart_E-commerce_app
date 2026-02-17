@@ -123,7 +123,7 @@ class _MyWidgetState extends State<MyWidget> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const ProductDetailScreen(
+              builder: (context) => ProductDetailScreen(
                 mainImage: 'assets/img_2.png',
                 image: [
                   'assets/img_2.png',
@@ -382,8 +382,8 @@ class _MyWidgetState extends State<MyWidget> {
                 style: TextStyle(color: Colors.black, fontSize: 14),
               ),
 
-              const SizedBox(height: 15),
-              Row(
+               const SizedBox(height: 15),
+             Row(
                 children: [
                   Expanded(
                     child: Container(

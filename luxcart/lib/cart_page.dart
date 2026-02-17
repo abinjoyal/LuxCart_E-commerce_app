@@ -78,7 +78,6 @@ class _CartPageState extends State<CartPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // IMAGE fills available space
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
