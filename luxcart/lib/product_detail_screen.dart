@@ -496,10 +496,13 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         builder: (context) {
                           // ⏱ Auto close after 1 second
                           Future.delayed(const Duration(seconds: 1), () {
+                            // ignore: use_build_context_synchronously
                             if (Navigator.canPop(context)) {
+                              // ignore: use_build_context_synchronously
                               Navigator.pop(context);
 
                               Navigator.pushAndRemoveUntil(
+                                // ignore: use_build_context_synchronously
                                 context,
                                 MaterialPageRoute(
                                   builder: (_) =>
