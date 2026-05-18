@@ -304,7 +304,7 @@ class _MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 281,
+        toolbarHeight: 271,
         automaticallyImplyLeading: false,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -382,8 +382,8 @@ class _MyWidgetState extends State<MyWidget> {
                 style: TextStyle(color: Colors.black, fontSize: 14),
               ),
 
-               const SizedBox(height: 15),
-             Row(
+              const SizedBox(height: 10),
+              Row(
                 children: [
                   Expanded(
                     child: Container(
@@ -441,7 +441,7 @@ class _MyWidgetState extends State<MyWidget> {
                 ],
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -841,16 +841,13 @@ class _CategoryChip extends StatelessWidget {
     );
   }
 }
+
 class FavoriteItem {
   final String image;
   final String price;
   final String name;
 
-  FavoriteItem({
-    required this.image,
-    required this.price,
-    required this.name,
-  });
+  FavoriteItem({required this.image, required this.price, required this.name});
 }
 
 class FavoriteData {
@@ -872,5 +869,3 @@ class FavoriteData {
     favorites.removeAt(index);
   }
 }
-
-
