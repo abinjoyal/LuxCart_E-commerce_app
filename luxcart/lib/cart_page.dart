@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'abi_1.dart';
+import 'home_screen.dart';
 import 'product_detail_screen.dart';
 import 'favorite_data.dart';
 
@@ -62,6 +62,7 @@ class _CartPageState extends State<CartPage> {
                           crossAxisCount: 2,
                           crossAxisSpacing: 6,
                           mainAxisSpacing: 6,
+                          childAspectRatio: 0.75,
                         ),
                     itemCount: CartData.cartItems.length,
                     itemBuilder: (context, index) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'abi_1.dart';
+import 'home_screen.dart';
 import 'cart_page.dart';
 import 'favorite_data.dart';
 import 'profile_page.dart';
@@ -60,7 +60,7 @@ class _DashboardState extends State<Dashboard> {
                       });
                     },
                     child: Icon(
-                      selectIndex == 0 ? Icons.home_outlined : Icons.home_outlined,
+                      selectIndex == 0 ? Icons.home : Icons.home_outlined,
                       color: selectIndex == 0 ? Colors.black : Colors.grey,
                     ),
                   ),
@@ -69,54 +69,32 @@ class _DashboardState extends State<Dashboard> {
                       setState(() {
                         selectIndex = 1;
                       });
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (_) => const CartPage(),
-                      //   ),
-                      // );
                     },
                     child: Icon(
                       selectIndex == 1
-                          ? Icons.shopping_cart_outlined
+                          ? Icons.shopping_cart
                           : Icons.shopping_cart_outlined,
                       color: selectIndex == 1 ? Colors.black : Colors.grey,
                     ),
                   ),
-                  //Icon(Icons.shopping_cart_outlined, color: Colors.grey),
-                  //Icon(Icons.shopping_bag_outlined, color: Colors.grey),
                   GestureDetector(
                     onTap: () {
                       setState(() {
                         selectIndex = 2;
                       });
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (_) => const FavoritesPage(),
-                      //   ),
-                      // );
                     },
                     child: Icon(
                       selectIndex == 2
-                          ? Icons.favorite_outline_outlined
+                          ? Icons.favorite
                           : Icons.favorite_outline_outlined,
                       color: selectIndex == 2 ? Colors.black : Colors.grey,
                     ),
                   ),
-
-                  //Icon(Icons.favorite_outline_outlined, color: Colors.grey),
                   GestureDetector(
                     onTap: () {
                       setState(() {
                         selectIndex = 3;
                       });
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (_) => const FavoritesPage(),
-                      //   ),
-                      // );
                     },
                     child: Icon(
                       selectIndex == 3 ? Icons.person : Icons.person_outlined,

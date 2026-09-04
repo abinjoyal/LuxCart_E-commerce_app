@@ -109,25 +109,26 @@ class ProfilePage extends StatelessWidget {
   }) {
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
-      decoration: BoxDecoration(
+      child: Material(
         color: Colors.white,
         borderRadius: BorderRadius.circular(14),
-      ),
-      child: ListTile(
-        leading: Icon(icon, color: isLogout ? Colors.red : Colors.black),
-        title: Text(
-          title,
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            color: isLogout ? Colors.red : Colors.black,
+        clipBehavior: Clip.antiAlias,
+        child: ListTile(
+          leading: Icon(icon, color: isLogout ? Colors.red : Colors.black),
+          title: Text(
+            title,
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              color: isLogout ? Colors.red : Colors.black,
+            ),
           ),
+          trailing: const Icon(
+            Icons.arrow_forward_ios,
+            size: 16,
+            color: Colors.grey,
+          ),
+          onTap: onTap,
         ),
-        trailing: const Icon(
-          Icons.arrow_forward_ios,
-          size: 16,
-          color: Colors.grey,
-        ),
-        onTap: onTap,
       ),
     );
   }

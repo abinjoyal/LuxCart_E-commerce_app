@@ -1,1 +1,1 @@
-// TODO Implement this library.
+export 'favorite_data.dart';

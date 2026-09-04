@@ -48,7 +48,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Buy Now"), centerTitle: true),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [

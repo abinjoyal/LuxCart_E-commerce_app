@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'abi_1.dart';
+import 'home_screen.dart';
 import 'dashboard.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
        
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: Dashboard(currentindex: 0),
     );

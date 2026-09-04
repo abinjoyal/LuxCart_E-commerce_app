@@ -49,36 +49,36 @@ class _MyWidgetState extends State<MyWidget> {
   ];
   late final List<List<String>> categoriesproductNames = [
     [
-      "Men/s Black\nHoodie",
-      "Men/s Grey\nHoodie",
-      "Men/s Blue\nHoodie",
-      "Men/s Brown\nHoodie",
+      "Men's Black\nHoodie",
+      "Men's Grey\nHoodie",
+      "Men's Blue\nHoodie",
+      "Men's Brown\nHoodie",
     ],
     [
-      "Men/s Running\nShoes",
-      "Men/s Casual\nShoes",
-      "Men/s Sneakers\nShoes",
-      "Men/s Sports\nShoes",
+      "Men's Running\nShoes",
+      "Men's Casual\nShoes",
+      "Men's Sneakers\nShoes",
+      "Men's Sports\nShoes",
     ],
     [
-      "Men/s Office\nBag",
-      "Men/s Travele\nBag",
-      "Men/s Backpack\nBag",
-      "Men/s Leather\nBag",
+      "Men's Office\nBag",
+      "Men's Travel\nBag",
+      "Men's Backpack\nBag",
+      "Men's Leather\nBag",
     ],
     [
-      "Men/s Casuart\nShirt",
-      "Men/s Forma\nShirt",
-      "Men/s Denim\nShirt",
-      "Men/s Cottont\nShirt",
+      "Men's Casual\nShirt",
+      "Men's Formal\nShirt",
+      "Men's Denim\nShirt",
+      "Men's Cotton\nShirt",
     ],
   ];
 
   final List<String> categoriesprice = [
-    "prise\n\$199.00",
-    "prise\n\$189.00",
-    "prise\n\$149.00",
-    "prise\n\$139.00",
+    "Price\n\$199.00",
+    "Price\n\$189.00",
+    "Price\n\$149.00",
+    "Price\n\$139.00",
   ];
 
   late final List<List<String>> categoriesdescription = [
@@ -304,7 +304,7 @@ class _MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 271,
+        toolbarHeight: 220,
         automaticallyImplyLeading: false,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -314,158 +314,165 @@ class _MyWidgetState extends State<MyWidget> {
               bottomRight: Radius.circular(10),
             ),
           ),
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 50),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: SafeArea(
+            bottom: false,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  const CircleAvatar(
-                    radius: 22,
-                    backgroundImage: AssetImage('assets/icon.png'),
-                  ),
-
-                  const Text(
-                    'TRENDORA',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 1, 0, 0),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-
-                  Stack(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const NotificationPage(),
-                            ),
-                          );
-                        },
-                        child: CircleAvatar(
-                          radius: 24,
-                          backgroundColor: Color(0xFFEFF1F4),
-                          child: const Icon(Icons.shopping_basket_outlined),
+                      const CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage('assets/icon.png'),
+                      ),
+
+                      const Text(
+                        'TRENDORA',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 1, 0, 0),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Positioned(
-                        right: 2,
-                        top: 2,
-                        child: CircleAvatar(
-                          radius: 8,
-                          backgroundColor: Colors.black,
-                          child: Text(
-                            "8",
-                            style: TextStyle(color: Colors.white, fontSize: 10),
+
+                      Stack(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const NotificationPage(),
+                                ),
+                              );
+                            },
+                            child: const CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Color(0xFFEFF1F4),
+                              child: Icon(Icons.shopping_basket_outlined, size: 20),
+                            ),
+                          ),
+                          const Positioned(
+                            right: 0,
+                            top: 0,
+                            child: CircleAvatar(
+                              radius: 7,
+                              backgroundColor: Colors.black,
+                              child: Text(
+                                "8",
+                                style: TextStyle(color: Colors.white, fontSize: 9),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 4),
+                  const Text(
+                    "Hello Tavorian",
+                    style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.w600),
+                  ),
+
+                  const SizedBox(height: 2),
+                  const Text(
+                    "Fashion confidence and reveals beauty.",
+                    style: TextStyle(color: Colors.black, fontSize: 13),
+                  ),
+
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 44,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF0F3F6),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Row(
+                            children: [
+                              const SizedBox(width: 10),
+                              const Icon(Icons.search, color: Colors.black, size: 20),
+                              const Expanded(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Search here...',
+                                    border: InputBorder.none,
+                                    isDense: true,
+                                    contentPadding: EdgeInsets.symmetric(vertical: 10),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 14,
+                                  vertical: 10,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: const [
+                                    Icon(Icons.tune, size: 18, color: Colors.white),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      'Filter',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color.fromARGB(
+                                          255,
+                                          246,
+                                          245,
+                                          244,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                     ],
                   ),
-                ],
-              ),
 
-              SizedBox(height: 6),
-              const Text(
-                "Hello Tavorian",
-                style: TextStyle(color: Colors.black, fontSize: 24),
-              ),
-
-              SizedBox(height: 4),
-              const Text(
-                "Fashion confidence and reveals beauty.",
-                style: TextStyle(color: Colors.black, fontSize: 14),
-              ),
-
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 48,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFF0F3F6),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: Row(
-                        children: [
-                          SizedBox(width: 10),
-                          Icon(Icons.search, color: Colors.black, size: 20),
-                          Expanded(
-                            child: TextField(
-                              decoration: InputDecoration(
-                                hintText: 'Search here...',
-                                border: InputBorder.none,
-                              ),
-                            ),
+                  const SizedBox(height: 6),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: List.generate(categories.length, (index) {
+                        return GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectedCategoryIndex = index;
+                            });
+                          },
+                          child: _CategoryChip(
+                            categories[index],
+                            selectedCategoryIndex == index,
+                            () {
+                              setState(() {
+                                selectedCategoryIndex = index;
+                              });
+                            },
                           ),
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 15,
-                              vertical: 12,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Icon(Icons.tune, size: 20, color: Colors.white),
-                                SizedBox(width: 6),
-                                Text(
-                                  'Filter',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    color: const Color.fromARGB(
-                                      255,
-                                      246,
-                                      245,
-                                      244,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                        );
+                      }),
                     ),
                   ),
                 ],
               ),
-
-              const SizedBox(height: 10),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: List.generate(categories.length, (index) {
-                    return GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedCategoryIndex = index;
-                        });
-                      },
-                      child: _CategoryChip(
-                        categories[index],
-                        selectedCategoryIndex == index,
-                        () {
-                          setState(() {
-                            selectedCategoryIndex = index;
-                          });
-                        },
-                      ),
-                    );
-                  }),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
@@ -475,7 +482,7 @@ class _MyWidgetState extends State<MyWidget> {
   }
 }
 
-class FavoritesData {}
+
 
 class Trendingwidget extends StatefulWidget {
   final String mainImage;
@@ -824,8 +831,8 @@ class _CategoryChip extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.all(9),
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: selected ? Colors.orange : Colors.grey.shade100,
@@ -842,30 +849,4 @@ class _CategoryChip extends StatelessWidget {
   }
 }
 
-class FavoriteItem {
-  final String image;
-  final String price;
-  final String name;
 
-  FavoriteItem({required this.image, required this.price, required this.name});
-}
-
-class FavoriteData {
-  static final List<FavoriteItem> favorites = [];
-
-  static bool isFavorite(String image) {
-    return favorites.any((item) => item.image == image);
-  }
-
-  static void toggleFavorite(FavoriteItem item) {
-    if (isFavorite(item.image)) {
-      favorites.removeWhere((e) => e.image == item.image);
-    } else {
-      favorites.add(item);
-    }
-  }
-
-  static void removeAt(int index) {
-    favorites.removeAt(index);
-  }
-}

@@ -1,6 +1,32 @@
 import 'package:flutter/material.dart';
-import 'abi_1.dart';
-import 'favorite_data.dart';
+
+class FavoriteItem {
+  final String image;
+  final String price;
+  final String name;
+
+  FavoriteItem({required this.image, required this.price, required this.name});
+}
+
+class FavoriteData {
+  static final List<FavoriteItem> favorites = [];
+
+  static bool isFavorite(String image) {
+    return favorites.any((item) => item.image == image);
+  }
+
+  static void toggleFavorite(FavoriteItem item) {
+    if (isFavorite(item.image)) {
+      favorites.removeWhere((e) => e.image == item.image);
+    } else {
+      favorites.add(item);
+    }
+  }
+
+  static void removeAt(int index) {
+    favorites.removeAt(index);
+  }
+}
 
 class FavoritesPage extends StatefulWidget {
   const FavoritesPage({super.key});

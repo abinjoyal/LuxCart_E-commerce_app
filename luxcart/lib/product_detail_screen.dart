@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'abi_1.dart';
+import 'favorite_data.dart';
+import 'home_screen.dart';
 import 'add_cart_page.dart';
 import 'buynow_page.dart';
 import 'cart_page.dart';
@@ -496,13 +497,11 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         builder: (context) {
                           // ⏱ Auto close after 1 second
                           Future.delayed(const Duration(seconds: 1), () {
-                            // ignore: use_build_context_synchronously
+                            if (!context.mounted) return;
                             if (Navigator.canPop(context)) {
-                              // ignore: use_build_context_synchronously
                               Navigator.pop(context);
 
                               Navigator.pushAndRemoveUntil(
-                                // ignore: use_build_context_synchronously
                                 context,
                                 MaterialPageRoute(
                                   builder: (_) =>
