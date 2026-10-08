@@ -10,7 +10,7 @@
 analyzer:
   errors:
     unused_import: ignore
-include: package:flutter_lints/flutter.yaml
+
 
 linter:
   # The lint rules applied to this project can be customized in the
