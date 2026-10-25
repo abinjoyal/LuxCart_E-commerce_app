@@ -9,7 +9,6 @@ LuxCart is a cross-platform e-commerce application developed using Flutter and P
 - **Cart Management**: Dynamic quantity adjustments, total calculations, and item management.
 - **Favorites and Wishlist**: Dynamic favorite tracking powered by Provider state management.
 - **Checkout Flow**: Direct purchase capability with order summary and shipping details.
-- **User Profile and Notifications**: Profile management and in-app notifications screen.
 
 ## Tech Stack
 
