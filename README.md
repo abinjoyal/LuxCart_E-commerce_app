@@ -15,7 +15,7 @@ LuxCart is a cross-platform e-commerce application developed using Flutter and P
 
 - **Framework**: Flutter (Dart)
 - **State Management**: Provider
-- **Design**: Material Design, Cupertino Icons
+- **Design**: Material Design
 
 ### Prerequisites
 
